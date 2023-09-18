@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #424242;
+}
+
+/* Checkbox */
+
+.container-checkbox {
+  display: flex;
+  flex-direction: column;
+  width: 176px;
+  height: 309px;
+  margin: 50px 50px;
+  padding-left: 30px;
+  padding-top: 21px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FFF;
+}
+
+.checkbox-title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.label:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.box {
+  display: none;
+}
+
+.box + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+.box + span::before {
+  content: url(../img/Check-mark.svg);
+  position: absolute;
+  left: 3px;
+  bottom: -1px;
+  opacity: 0;
+  text-align: center;
+  transition: opacity .3s ease-in-out;
+}
+
+#checkbox-1:checked + span::before {
+  opacity: 1;
+}
+
+#checkbox-1:checked + span {
+  border-color: #CCB26E;
+}
+
+#checkbox-2:checked + span::before {
+  opacity: 1;
+}
+
+#checkbox-2:checked + span {
+  border-color: #CCB26E;
+}
+
+#checkbox-3:checked + span::before {
+  opacity: 1;
+}
+
+#checkbox-3:checked + span {
+  border-color: #CCB26E;
+}
+
+#checkbox-4:checked + span::before {
+  opacity: 1;
+}
+
+#checkbox-4:checked + span {
+  border-color: #CCB26E;
+}
+
+#checkbox-5:checked + span::before {
+  opacity: 1;
+}
+
+#checkbox-5:checked + span {
+  border-color: #CCB26E;
+}
+
+#checkbox-6:checked + span::before {
+  opacity: 1;
+}
+
+#checkbox-6:checked + span {
+  border-color: #CCB26E;
+}

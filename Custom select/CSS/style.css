@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #424242;
+}
+
+/* Select */
+
+.container-select {
+  padding: 50px;
+}
+
+.choices {
+  width: 176px;
+}
+
+.is-open .choices__inner {
+  border-radius: 10px;
+  border: 1px solid #CCB26E;
+}
+
+.choices__inner {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #CCB26E;
+  z-index: 3;
+}
+
+.box {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 10px;
+}
+
+.choices__list--dropdown {
+  padding-top: 30px;
+  top: calc(100% - 30px);
+  border: 1px solid #CCB26E;
+  border-top-width: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.is-open .choices__list--dropdown {
+  border-color: #CCB26E;
+}
+
+.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+.choices[data-type*=select-one]:after {
+  height: 8px;
+  width: 8px;
+  z-index: 3;
+  top: 40%;
+  border: 1px solid #666;
+  border-width: 0 0 1px 1px;
+  transform: rotate(-45deg);
+
+}
+
+.choices[data-type*=select-one].is-open:after {
+  top: 60%;
+  border: 1px solid #CCB26E;
+  border-width: 1px 1px 0 0;
+}
+
+/* Map */
+
+.container-map {
+  margin: 50px;
+}
+
+.map {
+  width: 460px;
+  height: 460px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+/* СastomScroll */
+
+.container-castomScroll {
+  width: 400px;
+  height: 310px;
+  padding: 0 30px;
+  margin: 50px;
+  background-color: #fff;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #CCB26E;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
+/* Form */
+
+.container-form {
+  width: 440px;
+  height: 410px;
+  padding: 38px 30px 39px 30px;
+  margin: 50px;
+  background: rgba(0, 0, 0, .4);
+  border-radius: 10px;
+}
+
+.input {
+  width: 380px;
+  height: 60px;
+  padding: 24px 20px;
+  margin-bottom: 31px;
+  border-radius: 10px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.form-label {
+  position: relative;
+
+}
+
+.js-validate-error-label {
+  position: absolute; /* или в div и для div задайте display: flex; flex-direction: column-reverse */
+  width: 380px;
+  top: -35px;
+  left: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.button {
+  cursor: pointer;
+  width: 192px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #FF5C00;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  border: none;
+}
+
+/* Tooltipe */
+
+.container-tooltip {
+  position: relative;
+  width: 375px;
+  height: 160px;
+  padding: 20px 75px 20px 29px;
+  margin: 50px;
+  background-color: #fff;
+}
+
+.notification {
+  display: inline-flex;
+  align-self: center;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/tooltip.svg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.notification:hover {
+  background-image: url(../img/tooltip-open.svg);
+}
+
+.text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.tippy-box {
+  border-radius: 0;
+  padding: 7px 15px;
+  background-color: #666666;
+}
+
+.tippy-box[data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: #666666;
+}
+.tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: #666666;
+}
+.tippy-box[data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: #666666;
+}
+.tippy-box[data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: #666666;
+}

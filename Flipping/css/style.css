@@ -1,0 +1,432 @@
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --color__orange: #FF9900;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 1px solid #FF9900;
+}
+
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-Regular"),
+    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-Medium"),
+    url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-SemiBold"),
+    url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-Bold"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-ExtraBold"),
+    url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* Global */
+
+.flex {
+  display: flex;
+}
+
+.section-title {
+  padding-left: 2px;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 59.51px;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #FF9900;
+  color: #FFF;
+  border: none;
+  transition: background-color .3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 153, 0, 0.7)
+}
+
+.btn:focus {
+  outline: 2px solid #FF9900;
+}
+
+.btn:active {
+  background-color: #E1670E;
+}
+
+/* Steps */
+
+.steps-container {
+  margin-bottom: 90px;
+}
+
+.steps-title {
+  margin-bottom: 50px;
+}
+
+.steps-list-item:not(:last-child) {
+  margin-right: 86px;
+  margin-bottom: 47px;
+}
+
+.list-item-descr {
+  cursor: pointer;
+  border: none;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+  background-color: transparent;
+  transition: color .3s ease;
+}
+
+.list-item-descr:hover {
+  color: #FF9900;
+}
+.list-item-descr:focus {
+  outline: 2px solid #FF9900;
+}
+
+.list-item-descr:active {
+  color: #E1670E;
+}
+
+.steps-action-window {
+  min-width: 50%;
+  margin-right: 15px;
+}
+
+.action-window {
+  justify-content: space-between;
+}
+
+.window-image {
+  width: 885px;
+  height: 479px;
+  background-image: url(../img/steps-image-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.window-image-1 {
+  background-image: url(../img/steps-image-1.jpg);
+}
+
+.window-image-2 {
+  background-image: url(../img/steps-image-2.jpg);
+}
+
+.window-image-3 {
+  background-image: url(../img/steps-image-3.jpg);
+}
+
+.window-image-4 {
+  background-image: url(../img/steps-image-4.jpg);
+}
+
+.window-title {
+  max-width: 50%;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.window-descr {
+  max-width: 758px;
+  margin-bottom: 53px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.btn-1 {
+  margin-right: 32px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19.5px;
+  width: 175px;
+  min-height: 60px;
+}
+
+.btn-2 {
+  cursor: pointer;
+  width: 147px;
+  min-height: 60px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #333333;
+}
+
+.btn-2:hover {
+  color: #FFF;
+  background-color: #666666;
+  border: none;
+}
+
+.btn-2:focus {
+  outline: 1px solid #666666;
+  background-color: #666666;
+  border: none;
+}
+
+.btn-2:active {
+  background-color: #000;
+  outline: 1px solid #000;
+  border: none;
+}
+
+.tabs-nav__btn--active {
+  color: #E1670E;
+}
+
+.tabs-item {
+  display: none;
+}
+
+.tabs-item--active {
+  display: contents;
+}
+
+@media (min-width: 801px) and (max-width: 1080px) {
+
+  .container {
+    max-width: 955px;
+  }
+
+/* Steps */
+
+  .window-descr {
+    margin-bottom: 25px;
+  }
+
+  .window-image {
+    min-height: 689px;
+    background-size: cover;
+  }
+
+}
+
+@media (min-width: 451px) and (max-width: 800px) {
+
+  .container {
+    max-width: 698px;
+  }
+
+  /* Steps */
+
+  .action-window {
+    flex-direction: column;
+  }
+
+  .window-descr {
+    margin-bottom: 25px;
+  }
+
+  .window-image {
+    margin-bottom: 38px;
+    width: 100%;
+    height: 284px;
+    order: -1;
+    background-position: top center;
+  }
+
+  .window-title {
+    max-width: 100%;
+  }
+
+  .steps-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .steps-list-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .window-btn {
+    justify-content: space-between;
+    max-width: 354px;
+  }
+
+  .btn-1 {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .container {
+    max-width: 420px;
+  }
+
+  .btn {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFF;
+  }
+
+  /* Steps */
+
+  .steps-container {
+    margin-bottom: 60px;
+  }
+
+  .steps-title {
+    padding: 0;
+    margin-bottom: 16px;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .action-window {
+    flex-direction: column;
+  }
+
+  .window-descr {
+    margin-bottom: 25px;
+  }
+
+  .window-image {
+    margin-bottom: 16px;
+    width: 100%;
+    height: 160px;
+    order: -1;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .window-title {
+    max-width: 100%;
+  }
+
+  .steps-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .steps-list-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .window-btn {
+    justify-content: space-between;
+    max-width: 354px;
+  }
+
+  .btn-1 {
+    margin-right: 0;
+  }
+
+  .list-item-descr {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .window-title {
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .window-descr {
+    margin-bottom: 16px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .btn-1 {
+    margin-right: 10px;
+    width: 162px;
+    min-height: 40px;
+  }
+
+  .btn-2 {
+    width: 118px;
+    min-height: 40px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+}

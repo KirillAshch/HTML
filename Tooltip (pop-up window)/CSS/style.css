@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #424242;
+}
+
+/* Tooltipe */
+
+.container-tooltip {
+  position: relative;
+  width: 375px;
+  height: 160px;
+  padding: 20px 75px 20px 29px;
+  margin: 50px;
+  background-color: #fff;
+}
+
+.notification {
+  display: inline-flex;
+  align-self: center;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/tooltip.svg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.notification:hover {
+  background-image: url(../img/tooltip-open.svg);
+}
+
+.text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.tippy-box {
+  border-radius: 0;
+  padding: 7px 15px;
+  background-color: #666666;
+}
+
+.tippy-box[data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: #666666;
+}
+.tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: #666666;
+}
+.tippy-box[data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: #666666;
+}
+.tippy-box[data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: #666666;
+}

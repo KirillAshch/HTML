@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Form</title>
+</head>
+<body>
+  <section class="section-form">
+    <div class="container-form">
+      <form action="" class="js-form">
+        <label class="form-label" for="name">
+          <input class="input"
+            name="Имя"
+            type="text"
+            placeholder="Имя*"
+            data-validate-field="name"
+          >
+        </label>
+        <label class="form-label" for="tel">
+          <input class="input"
+            name="tel"
+            type="tel"
+            placeholder="Телефон*"
+            data-validate-field="tel"
+            data-validate-rules="phone"
+          >
+        </label>
+        <label class="form-label" for="email">
+          <input class="input"
+            name="email"
+            type="email"
+            placeholder="E-mail*"
+            data-validate-field="email"
+          >
+        </label>
+        <button class="button">Заказать</button>
+      </form>
+    </div>
+  </section>
+<script src="just-validate.min.js"></script>
+<script src="inputmask.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

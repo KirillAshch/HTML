@@ -1,0 +1,13 @@
+.container {
+  max-width: 1920px;
+  margin: auto;
+}
+
+.header {
+  max-width: 100%;
+}
+
+.text {
+  max-width: 50%;
+  margin: auto;
+}

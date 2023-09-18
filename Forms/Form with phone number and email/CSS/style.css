@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #424242;
+}
+
+/* Form */
+
+.container-form {
+  width: 440px;
+  height: 410px;
+  padding: 38px 30px 39px 30px;
+  margin: 50px;
+  background: rgba(0, 0, 0, .4);
+  border-radius: 10px;
+}
+
+.input {
+  width: 380px;
+  height: 60px;
+  padding: 24px 20px;
+  margin-bottom: 31px;
+  border-radius: 10px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.form-label {
+  position: relative;
+
+}
+
+.js-validate-error-label {
+  position: absolute; /* или в div и для div задайте display: flex; flex-direction: column-reverse */
+  width: 380px;
+  top: -35px;
+  left: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.button {
+  cursor: pointer;
+  width: 192px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #FF5C00;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  border: none;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagoona</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="main">
+    <section class="interact">
+      <div class="container interact-container">
+        <h2 class="interact-title title">
+          Хочу тур
+        </h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="interact-form">
+          <div class="interact-form-blog">
+            <div class="interact-form-blog-center flex">
+              <div class="form-input">
+                <span class="form-text">
+                  Город вылета
+                </span>
+                <select class="interact-form-blog-input" name="city">
+                  <option value="Санкт-Петербург" selected>Санкт-Петербург</option>
+                  <option value="Москва">Москва</option>
+                </select>
+              </div>
+              <div class="form-input">
+                <span class="form-text">
+                  Страна
+                </span>
+                <select class="interact-form-blog-input" name="country">
+                  <option value="Австралия">Австралия</option>
+                  <option value="Китай">Китай</option>
+                </select>
+              </div>
+              <div class="form-input">
+                <span class="form-text">
+                  Дата прибытия
+                </span>
+                <input class="interact-form-blog-input" type="date" name="date arrivel" value="2021-10-18">
+              </div>
+              <div class="form-input">
+                <span class="form-text">
+                  Ночей
+                </span>
+                <input class="interact-form-blog-input number" type="number" name="days" value="6" min="1">
+              </div>
+              <div class="form-input">
+                <span class="form-text">
+                  Туристы
+                </span>
+                <input class="interact-form-blog-input number" type="number" name="people" value="2" min="1" required>
+              </div>
+              <div class="form-input-btn">
+                <button class="btn">Найти</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
